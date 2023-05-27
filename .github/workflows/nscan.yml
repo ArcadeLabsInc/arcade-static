@@ -1,4 +1,4 @@
-name: Daily scan
+name: daily-nscan
 on:
   schedule:
     - cron: '0 14 * * *'
