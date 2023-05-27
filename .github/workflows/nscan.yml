@@ -2,6 +2,7 @@ name: daily-nscan
 on:
   schedule:
     - cron: '0 14 * * *'
+  workflow_dispatch:
 jobs:
   issue:
     runs-on: ubuntu-latest
