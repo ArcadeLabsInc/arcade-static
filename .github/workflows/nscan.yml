@@ -1,0 +1,20 @@
+name: Daily scan
+on:
+  schedule:
+    - cron: '0 14 * * *'
+jobs:
+  issue:
+    runs-on: ubuntu-latest
+    permission:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with: 
+          node-version: 18
+      - run: bash ./nscan.sh
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "daily nscan $(date +'%Y-%m-%d')"
+          file_pattern: *.json
+
