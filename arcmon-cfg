@@ -1,0 +1,9 @@
+{
+"relays":
+  [
+    "wss://relay.damus.io",
+    "wss://relay.arcade.city",
+    "wss://arc1.arcadelabs.co",
+    "wss://nos.lol"
+  ]
+}
